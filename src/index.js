@@ -12,7 +12,7 @@ const initialState = {};
 const enhancers = [];
 const middlewares = [thunk];
 
-// Log state whilde development
+// Log state while development
 if (process.env.NODE_ENV === 'development') {
 	const { logger } = require('redux-logger');
 

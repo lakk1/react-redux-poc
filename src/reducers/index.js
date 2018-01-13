@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import marketplace from './maketplace';
+import marketplace from './marketplace';
 
 const marketplaceReducer = combineReducers({
   marketplace,

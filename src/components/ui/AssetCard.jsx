@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Image, Button } from 'semantic-ui-react';
 import logo from '../../logo.svg';
 
-const AssetCard = (props) => (
+const AssetCard = props => (
 	<Card>
 		<Card.Content>
 			<Image floated="right" size="mini" src={logo} />

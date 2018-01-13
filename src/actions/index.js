@@ -18,15 +18,15 @@ export const filterAssets = text => ({
   payload: text.toString().toLowerCase(),
 });
 
-// Action Creaters
+// Action Creators
 
 export const fetchingAssets = () => async (dispatch) => {
-  const intitalAssets = postsJson;
+  const initialAssets = postsJson;
   setTimeout(() => {
-    dispatch(updateTotalAssets(intitalAssets));
+    dispatch(updateTotalAssets(initialAssets));
     dispatch({
       type: C.VISIBLE_ASSETS,
-      payload: intitalAssets,
+      payload: initialAssets,
     });
   }, 500);
 };

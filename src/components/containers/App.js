@@ -17,6 +17,15 @@ class App extends Component {
 		this.props.fetchingAssets();
 	}
 
+	handleChange(event) {
+		const term = event.target.value
+			.trim()
+			.toString()
+			.toLowerCase();
+		console.log(this);
+		this.props.searchingAssets(term);
+	}
+
 	assetsList() {
 		if (!this.props.marketplace.visibleAssets) {
 			return <Loader active inline="centered" />;
@@ -37,12 +46,6 @@ class App extends Component {
 				</Card.Group>
 			);
 		}
-	}
-
-	handleChange(event) {
-		const term = event.target.value.toString().toLowerCase();
-		console.log(this);
-		this.props.searchingAssets(term);
 	}
 
 	render() {

@@ -1,13 +1,13 @@
 import _ from 'lodash';
 import C from '../actions/types';
 
-const marketplaceState = {
-  totalAssets: [],
-  visibleAssets: [],
-  RemovedAssets: [],
-};
+// const marketplaceState = {
+//   totalAssets: [],
+//   visibleAssets: [],
+//   RemovedAssets: [],
+// };
 
-const marketplace = (state = marketplaceState, action) => {
+const marketplace = (state = {}, action) => {
   switch (action.type) {
     case C.TOTAL_ASSETS:
       return Object.assign({}, state, {

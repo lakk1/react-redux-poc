@@ -7,12 +7,6 @@ import AssetCard from '../ui/AssetCard';
 import * as actions from '../../actions';
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-
-		this.handleChange = this.handleChange.bind(this);
-	}
-
 	componentWillMount() {
 		this.props.fetchingAssets();
 	}
@@ -40,7 +34,7 @@ class App extends Component {
 		} else {
 			return (
 				<Card.Group className="centered">
-					{this.props.marketplace.visibleAssets.map(function(asset) {
+					{this.props.marketplace.visibleAssets.map(asset => {
 						return <AssetCard asset={asset} key={asset.id} />;
 					})}
 				</Card.Group>
@@ -70,7 +64,7 @@ class App extends Component {
 								iconPosition="left"
 								icon={{ name: 'search' }}
 								placeholder="Quick Search..."
-								onChange={this.handleChange}
+								onChange={this.handleChange.bind(this)}
 							/>
 						</Grid.Column>
 					</Grid.Row>
